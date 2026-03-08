@@ -1,10 +1,10 @@
 # CompressBench Scenarios
 
-Human-readable scenario index for the 100 cases in `openclaw_v1.jsonl`.
-
-Each scenario describes a real-world compression use case, what must be preserved, what can be compressed, and how to grade quality.
+Human-readable scenario index for benchmark cases. Each scenario describes a real-world compression use case, what must be preserved, what can be compressed, and how to grade quality.
 
 ## Scenario Map
+
+### Existing Cases (100 in openclaw_v1.jsonl)
 
 | ID | Scenario | Priority | Cases | Category | Key Challenge |
 |----|----------|----------|-------|----------|---------------|
@@ -17,16 +17,32 @@ Each scenario describes a real-world compression use case, what must be preserve
 
 *s04 and s05 share the same 20 documentation cases — they represent different compression intents for the same content type.
 
+### New Scenarios (cases TBD)
+
+| ID | Scenario | Priority | Target Cases | Key Challenge |
+|----|----------|----------|-------------|---------------|
+| s07 | [Function Calling & Tool Use](s07_function_calling.md) | **P0** | 15-20 | Preserve JSON Schema, tool names, param types |
+| s08 | [Multilingual (CJK)](s08_multilingual.md) | P1 | 15 | CJK tokenization, encoding integrity |
+| s09 | [Long Context (>2K tokens)](s09_long_context.md) | **P0** | 15 | Positional bias, scaling behavior |
+| s10 | [Prompt Chains & Multi-step](s10_prompt_chain.md) | P1 | 10 | Step completeness, ordering |
+| s11 | [Few-shot Examples](s11_few_shot.md) | P1 | 10 | Example count, input/output pairing |
+
 ## How Categories Map
 
 ```
-openclaw_v1.jsonl categories    →    Scenarios
+openclaw_v1.jsonl categories    →    Scenarios (existing)
 ─────────────────────────────        ──────────
 code_context (25 cases)         →    s01 Code Review
 structured_data (20 cases)      →    s02 JSON & Structured
 chat_history (25 cases)         →    s03 Customer Service
 documentation (20 cases)        →    s04 Rules + s05 RAG Docs
 mixed (10 cases)                →    s06 Agent Workflow
+
+New scenarios (no cases yet)    →    s07 Function Calling
+                                     s08 Multilingual
+                                     s09 Long Context
+                                     s10 Prompt Chains
+                                     s11 Few-shot Examples
 ```
 
 ## Priority Definitions
@@ -42,6 +58,16 @@ Incoming prompt → Auto-classify scenario → Route to specialized compressor �
 ```
 
 Each scenario will eventually have its own compression strategy (or even distilled model). For now, running the generic LLMLingua-2 across all scenarios tells us where the gaps are.
+
+## Case Creation Roadmap
+
+| Phase | Scenarios | Total New Cases |
+|-------|-----------|----------------|
+| Phase 1 | s07 Function Calling, s09 Long Context | 30-35 |
+| Phase 2 | s10 Prompt Chains, s11 Few-shot | 20 |
+| Phase 3 | s08 Multilingual | 15 |
+
+Target: **165 total cases** (100 existing + 65 new)
 
 ## Running Benchmarks
 
