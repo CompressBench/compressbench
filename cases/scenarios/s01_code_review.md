@@ -70,4 +70,4 @@ class AuthMiddleware:
 
 ## Notes
 
-Sam's feedback: "Compression log flights was kinda harder to read too" — likely refers to code output losing structure. This scenario is critical to get right for developer-facing products.
+Critical to get right for developer-facing products — code output losing structure is a common complaint.

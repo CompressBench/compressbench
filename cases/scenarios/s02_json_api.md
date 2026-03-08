@@ -11,7 +11,7 @@ current_score: null
 
 ## What Is This Scenario
 
-Prompt contains API specs, JSON schemas, config files, or instructs the LLM to respond in structured format (JSON, YAML, XML). This is Sam's #1 complaint — "If your system requires specific formatting then compress does not work."
+Prompt contains API specs, JSON schemas, config files, or instructs the LLM to respond in structured format (JSON, YAML, XML). If the system requires specific formatting, generic compression breaks it.
 
 ## Example Prompt
 
@@ -70,4 +70,4 @@ Return result as JSON: {"errors": [{"code": "...", "status": N}]}
 
 ## Notes
 
-This is the scenario Sam explicitly called out. For pilot customers with API-heavy workflows, getting this wrong = deal breaker. Consider a "JSON-aware" compression mode that parses and protects structured blocks.
+For pilot customers with API-heavy workflows, getting this wrong = deal breaker. Consider a "JSON-aware" compression mode that parses and protects structured blocks.

@@ -11,7 +11,7 @@ current_score: null
 
 ## What Is This Scenario
 
-Multi-turn conversations where a user describes a problem and an assistant helps debug/resolve it. Includes support tickets, troubleshooting dialogues, and Q&A threads. Sam said "maybe for specific applications" like "customer service response" and "feedback from a customer" — this is the sweet spot.
+Multi-turn conversations where a user describes a problem and an assistant helps debug/resolve it. Includes support tickets, troubleshooting dialogues, and Q&A threads. This is the sweet spot for compression — lots of verbal filler, repeated context across turns.
 
 ## Example Prompt
 
@@ -67,4 +67,4 @@ What was the root cause and recommended fix?
 
 ## Notes
 
-This is the highest-ROI scenario for compression — chat history is verbose by nature with lots of repeated context across turns. Sam explicitly suggested this use case. Pilot customers in support/helpdesk will benefit most.
+Highest-ROI scenario for compression — chat history is verbose by nature with lots of repeated context across turns. Pilot customers in support/helpdesk will benefit most.

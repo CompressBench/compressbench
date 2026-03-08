@@ -31,7 +31,7 @@ mixed (10 cases)                →    s06 Agent Workflow
 
 ## Priority Definitions
 
-- **P0**: Pilot customer critical. Must score well before launch. Sam's feedback directly targets these.
+- **P0**: Pilot customer critical. Must score well before launch.
 - **P1**: Important for product-market fit. Can iterate after initial launch.
 - **P2**: Nice to have. Future expansion.
 

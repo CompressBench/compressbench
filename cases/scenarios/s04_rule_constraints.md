@@ -11,7 +11,7 @@ current_score: null
 
 ## What Is This Scenario
 
-Long system prompts containing setup instructions, configuration docs, behavioral rules, and constraints. Sam's feedback: "at higher compression context and rules get loss" — if a rule like "never reveal pricing" gets compressed away, the model violates it.
+Long system prompts containing setup instructions, configuration docs, behavioral rules, and constraints. At higher compression rates, context and rules get lost — if a rule like "never reveal pricing" gets compressed away, the model violates it.
 
 ## Example Prompt
 
